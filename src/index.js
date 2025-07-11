@@ -3,9 +3,9 @@ import cors from 'cors';
 import { config } from 'dotenv';
 import rateLimit from 'express-rate-limit';
 
-import router from './routes/index.js';
-import { ErrorHandler } from './utils/index.js';
-import { resetDatabase } from './models/index.js';
+import router from './routes/index.route.js';
+import { ErrorHandler } from './utils/index.util.js';
+import { resetDatabase } from './models/index.model.js';
 import morgan from 'morgan';
 
 config();
