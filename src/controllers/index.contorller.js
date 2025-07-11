@@ -1,4 +1,4 @@
-import { generateCode } from "../services/index.js";
+import { generateCode } from "../services/index.service.js";
 
 export async function shortenUrl(req, res) {
     const data = await generateCode(req._data.url);
@@ -8,5 +8,5 @@ export async function shortenUrl(req, res) {
 }
 
 export function redirect(req, res) {
-    res.redirect(301, req._data.url);
+    res.redirect(302, req._data.url);
 }

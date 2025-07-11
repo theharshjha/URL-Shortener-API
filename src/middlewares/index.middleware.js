@@ -1,7 +1,8 @@
 import validator from 'validator'
-import { fetchCode } from '../services/index.js';
+import { fetchCode } from '../services/index.service.js';
 
 export function validURL(req, res, next) {
+    console.log("dfasda");
     try {
         const url = req.body.url;
         if (!validator.isURL(url)) {

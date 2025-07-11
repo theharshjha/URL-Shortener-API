@@ -23,9 +23,10 @@ export function readCode(code) {
 export async function resetDatabase() {
   try {
     await prisma.links.deleteMany();
-    console.log('✅  DB cleared on startup');
+    console.log('DB cleared on startup');
   } catch (err) {
-    console.error('❌ Failed to clear DB:');
+    console.error('Failed to clear DB:');
+    process.exit(1)
   }
 }
 

@@ -1,5 +1,5 @@
-import { readCode, writeCode } from "../models/index.js";
-import { generateHash } from "../utils/index.js";
+import { readCode, writeCode } from "../models/index.model.js";
+import { generateHash } from "../utils/index.util.js";
 
 export function generateCode(url) {
     if (!url.startsWith('http://') && !url.startsWith('https://')) {
